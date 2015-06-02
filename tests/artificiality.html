@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../css/style.css" />
+        <script src="../js/jquery-1.11.0.min.js"></script>
+        <script src="../js/translation.js"></script>
+        <script src="../js/common.js"></script>
+    </head>
+    <body>
+        <div id="wrapper">
+
+            <div id="mobile_menu">
+                <div id="mobile_menu_header">
+                    <img id="menu_close" src="../images/heart-menu.png" alt="menu">
+                    <img src="../images/header-logo-mobile.png" alt="logo">
+                </div>
+                <nav class="mobile_header_nav">
+                    <ul>
+                        <li><div class="test_bullet first"></div><a href="javascript:" id="6" class="low_calorie"></a></li>
+                        <li><div class="test_bullet second"></div><a href="javascript:" id="7" class="artificiality"></a></li>
+                        <li><div class="test_bullet third"></div><a href="javascript:" id="6" class="energy_balance"></a></li>
+                        <li><div class="test_bullet fourth"></div><a href="javascript:" id="10" class="ingredients"></a></li>
+                    </ul>
+                </nav>
+                <div id="mobile_menu_footer">
+                    <nav>
+                        <ul>
+                            <li><img src="../images/home-mobile-icon.png"><a href="javascript:" onClick="parent.goToPage('pages/landing.html')" class="home"></a></li>
+                            <li><img src="../images/about-mobile-icon.png"><a href="javascript:" onClick="parent.goToPage('pages/about.html')" class="about"></a></li>
+                            <li><img src="../images/mobile-qa-icon.png"><a href="javascript:" onClick="parent.goToPage('pages/qa.html')" class="qa"></a></li>
+                            <li><img src="../images/help-mobile-icon.png"><a href="javascript:" onClick="parent.goToPage('pages/help.html')" class="help"></a></li>
+                            <li><img src="../images/mobile-exit-icon.png" style="margin-left: -4px"><a href="javascript:" onClick="parent.exit()" class="exit"></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>            
+            <div id="header">
+                <div id="mobile_menu_icon">
+                    <img alt="menu" src="../images/heart-menu.png" id="menu_open">
+                </div>
+
+                <div class="title_gradient" id="question_title">
+                    <h2></h2>
+                </div>
+                <div id="heart">
+                    <img alt="heart" src="../images/header-heart-icon.png">
+                </div>
+            </div>
+
+            <div style="margin-top: 35px; padding-left: 20px" id="center_section">
+                <div id="questions_section">
+                </div>
+
+                <img alt="submit" src="../images/submit-btn-disabled.png" id="submit_btn">
+
+                <div id="answer_section">
+                    <span class="answer_status"></span>
+                    <div id="answer_overlay">
+                    </div>
+                </div>
+            </div>
+
+            <div class="test_watermark">
+                <div style="padding-left: 15px; font-family: VAGRounded; line-height: 5px;" class="red_border">Artificiality</div>
+            </div>
+
+
+            <div id="footer"></div>
+        </div>
+
+        <!-- FOR TRANSLATION-->
+        <script type="text/javascript">
+            var testName = lang.artificiality;
+            var correctLabel = lang.correctLabel;
+            var incorrectLabel = lang.incorrectLabel;
+            var continueBtn = lang.continueBtn;
+            var questions = [
+                {
+                    "id": 4,
+                    "name": "1. How can something 'artificial' be good for me to eat or drink?",
+                    "redSpan": "\u201cArtificial\u201d does not necessarily mean \u201cbad\u201d &\r\n\u201cnatural\u201d does not necessarily mean \u201cgood\u201d! ",
+                    "graySpan": "Many 'natural' substances can be toxic (e.g. toxins \r\nin mushrooms) and many E-numbers (additives), \r\nwhether from natural source or not, have the exact \r\nsame chemical composition, e.g. citric acid.",
+                    "photo": "dc49d-1-artificialy-q1.png",
+                    "answers": [
+                        {
+                            "id": 434,
+                            "name": "It can't. One should try to stay away from artificial ingredients!",
+                            "cr": false
+                        },
+                        {
+                            "id": 567,
+                            "name": "\u201cArtificial\u201d does not necessarily mean \u201cbad\u201d and \u201cnatural\u201d does not necessarily\r\nmean \u201cgood\u201d!",
+                            "cr": true
+                        },
+                        {
+                            "id": 648,
+                            "name": "Because we, at the Coca-Cola Company, say so.",
+                            "cr": false
+                        }
+                    ]
+                },
+                {
+                    "id": 5,
+                    "name": "2. What are food additives?",
+                    "redSpan": "Additive is any substance that is:<br \/>\r\n\r\n\u2022 added intentionally to foodstuff to perform certain \r\n   technological functions in the manufacture, \r\n   processing, preparation, treatment, packaging, \r\n   transport or storage.<br\/>\r\n\u2022 not normally consumed as a food in itself.<br\/>\r\n\u2022 not normally used as a characteristic ingredient \r\n   of food, whether or not it has nutritive value.",
+                    "graySpan": "Food additives can be natural\/ from natural source \r\nor artificial (man-made).",
+                    "photo": "8069e-1-artificialy-q2.png",
+                    "answers": [
+                        {
+                            "id": 759,
+                            "name": "Additives are substances that are added in foodstuff to perform a specific \r\ntechnological function.",
+                            "cr": true
+                        },
+                        {
+                            "id": 858,
+                            "name": "Additives are only preservatives.",
+                            "cr": false
+                        },
+                        {
+                            "id": 935,
+                            "name": "Additives are ingredients added to any product to make it more nutritious.",
+                            "cr": false
+                        }
+                    ]
+                },
+                {
+                    "id": 6,
+                    "name": "3. What does the 'E' in front of some Coca-Cola ingredients mean?",
+                    "redSpan": "E numbers are simply a classification system for certain \r\ningredients which have been approved by the European \r\nUnion for use in foods and beverages. In the European \r\nUnion, approved additives are given a number with the \r\nletter 'E' placed before the number.",
+                    "graySpan": "All additives for food and drinks undergo rigorous \r\nscientific evaluation before they are approved as being \r\nsafe.  Among the many international bodies monitoring \r\nadditives are the European Food Safety Authority (EFSA), \r\nthe Joint Expert Committee on Food Additives (JECFA) of \r\nthe Food and Agriculture Organisation (FAO) and the \r\nWorld Health Organisation (WHO). Approval is monitored, \r\nreviewed and amended in the light of new scientific data\r\non an ongoing basis. The \u201cE number\u201d is a guarantee of safety!",
+                    "photo": "0ec2f-1-artificialy-q3.png",
+                    "answers": [
+                        {
+                            "id": 101,
+                            "name": "E-numbers are a way to classify additives according to their safety levels.",
+                            "cr": false
+                        },
+                        {
+                            "id": 112,
+                            "name": "E-numbers are a systematic way of \u201ccoding\u201d different food additives in the \r\nEuropean Union (EU).",
+                            "cr": true
+                        },
+                        {
+                            "id": 125,
+                            "name": "E-numbers are substitutes of ingredients.",
+                            "cr": false
+                        }
+                    ]
+                },
+                {
+                    "id": 7,
+                    "name": "4. How many additives does Coca-Cola have?",
+                    "redSpan": "Coca-Cola has only two additives: \r\nCaramel color (E150d) and Phosphoric acid (E 338).",
+                    "graySpan": "",
+                    "photo": "d86ac-1-artificialy-q4.png",
+                    "answers": [
+                        {
+                            "id": 13,
+                            "name": "2",
+                            "cr": true
+                        },
+                        {
+                            "id": 14,
+                            "name": "4",
+                            "cr": false
+                        },
+                        {
+                            "id": 15,
+                            "name": "7",
+                            "cr": false
+                        }
+                    ]
+                },
+                {
+                    "id": 8,
+                    "name": "5. How can it be that Coca-Cola has no added preservatives?",
+                    "redSpan": "Wherever in the world people drink Coca-Cola \r\nit has no added preservatives.",
+                    "graySpan": "",
+                    "photo": "1981f-1-artificialy-q5.png",
+                    "answers": [
+                        {
+                            "id": 16,
+                            "name": "It does not need preservatives because it is pasteurized.",
+                            "cr": false
+                        },
+                        {
+                            "id": 17,
+                            "name": "It doesn't need preservatives because it is consumed very quickly.",
+                            "cr": false
+                        },
+                        {
+                            "id": 18,
+                            "name": "The unique combination of ingredients is responsible for the stability of Coca-Cola.",
+                            "cr": true
+                        }
+                    ]
+                },
+                {
+                    "id": 9,
+                    "name": "6. Are food additives safe?",
+                    "redSpan": "All authorized food additives, including the ones in\r\nour products, are safe.",
+                    "graySpan": "Their safety has been thoroughly evaluated by \r\nthe European Food Safety Authority and other \r\nnational and international food safety authorities. \r\nWe would NEVER compromise the safety of our \r\nconsumers who have trusted us for more than\r\n125 years.",
+                    "photo": "e3a54-1-artificialy-q6.png",
+                    "answers": [
+                        {
+                            "id": 19,
+                            "name": "Only the ones between the range E250-E350.",
+                            "cr": false
+                        },
+                        {
+                            "id": 20,
+                            "name": "All authorized food additives, including the ones in our products, are safe.",
+                            "cr": true
+                        },
+                        {
+                            "id": 21,
+                            "name": "Only preservatives are safe.",
+                            "cr": false
+                        }
+                    ]
+                },
+                {
+                    "id": 10,
+                    "name": "7. I have heard that some E numbers are more dangerous than others.",
+                    "redSpan": "There is NO SUCH THING as good or bad, safe \r\nor dangerous E-number. All E-numbers have \r\nundergone the same strict safety evaluations.",
+                    "graySpan": "If substances were not considered to be safe, \r\nthey would not be on the European Union\u2019s list \r\nof approved additives.",
+                    "photo": "871fc-1-artificialy-q7.png",
+                    "answers": [
+                        {
+                            "id": 22,
+                            "name": "There is NO SUCH THING as good or bad, safe or dangerous E numbers. \r\nThey are all safe when used at levels specified by authorities.",
+                            "cr": true
+                        },
+                        {
+                            "id": 23,
+                            "name": "Preservatives are generally safer than colors.",
+                            "cr": false
+                        },
+                        {
+                            "id": 24,
+                            "name": "Only the ones in the range  E350-E500.",
+                            "cr": false
+                        }
+                    ]
+                }
+            ];
+        </script>
+        <!--END OF TRANSLATION-->
+
+        <script type="text/javascript">
+            var site_url = "../";
+            var testFile = parent.testFileName;
+        </script> 
+        <script type="text/javascript" src="../js/testplay.js"></script>
+    </body>
+</html>

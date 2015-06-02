@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../css/style.css" />
+        <script src="../js/jquery-1.11.0.min.js"></script>
+        <script src="../js/translation.js"></script>
+        <script src="../js/common.js"></script>
+    </head>
+    <body>
+        <div id="wrapper">
+
+            <div id="mobile_menu">
+                <div id="mobile_menu_header">
+                    <img id="menu_close" src="../images/heart-menu.png" alt="menu">
+                    <img src="../images/header-logo-mobile.png" alt="logo">
+                </div>
+                <nav class="mobile_header_nav">
+                    <ul>
+                        <li><div class="test_bullet first"></div><a href="javascript:" id="6" class="low_calorie"></a></li>
+                        <li><div class="test_bullet second"></div><a href="javascript:" id="7" class="artificiality"></a></li>
+                        <li><div class="test_bullet third"></div><a href="javascript:" id="6" class="energy_balance"></a></li>
+                        <li><div class="test_bullet fourth"></div><a href="javascript:" id="10" class="ingredients"></a></li>
+                    </ul>
+                </nav>
+                <div id="mobile_menu_footer">
+                    <nav>
+                        <ul>
+                            <li><img src="../images/home-mobile-icon.png"><a href="javascript:" onClick="parent.goToPage('pages/landing.html')" class="home"></a></li>
+                            <li><img src="../images/about-mobile-icon.png"><a href="javascript:" onClick="parent.goToPage('pages/about.html')" class="about"></a></li>
+                            <li><img src="../images/mobile-qa-icon.png"><a href="javascript:" onClick="parent.goToPage('pages/qa.html')" class="qa"></a></li>
+                            <li><img src="../images/help-mobile-icon.png"><a href="javascript:" onClick="parent.goToPage('pages/help.html')" class="help"></a></li>
+                            <li><img src="../images/mobile-exit-icon.png" style="margin-left: -4px"><a href="javascript:" onClick="parent.exit()" class="exit"></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>            
+            <div id="header">
+                <div id="mobile_menu_icon">
+                    <img alt="menu" src="../images/heart-menu.png" id="menu_open">
+                </div>
+
+                <div class="title_gradient" id="question_title">
+                    <h2></h2>
+                </div>
+                <div id="heart">
+                    <img alt="heart" src="../images/header-heart-icon.png">
+                </div>
+            </div>
+
+            <div style="margin-top: 35px; padding-left: 20px" id="center_section">
+                <div id="questions_section">
+                </div>
+
+                <img alt="submit" src="../images/submit-btn-disabled.png" id="submit_btn">
+
+                <div id="answer_section">
+                    <span class="answer_status"></span>
+                    <div id="answer_overlay">
+                    </div>
+                </div>
+            </div>
+
+            <div class="test_watermark">
+                <div style="padding-left: 15px; font-family: VAGRounded; line-height: 5px;" class="red_border">Low calorie sweeteners</div>
+            </div>
+
+
+            <div id="footer"></div>
+        </div>
+
+        <!-- FOR TRANSLATION-->
+        <script type="text/javascript">
+            var testName = lang.low_calorie;
+            var correctLabel = lang.correctLabel;
+            var incorrectLabel = lang.incorrectLabel;
+            var continueBtn = lang.continueBtn;
+            var questions = [
+                {
+                    "id": 27,
+                    "name": "1. What are low \/ no calorie sweeteners?",
+                    "redSpan": "Low\/No calorie sweeteners are up to several hundred times\r\nsweeter than sugar, so only a small amount is needed\r\nto replace a larger amount of sugar. LNCS are used in big \r\nvariety of food & drink products including soft drinks, \r\nchewing gum, confectionery, frozen desserts, \r\nyoghurts, dessert mixes and puddings. ",
+                    "graySpan": "The most commonly used LNCS in our products: \r\naspartame, acesulfame-K, cyclamate, sucralose, \r\nsteviol glucosides.",
+                    "photo": "7a575-4-calories-q1.png",
+                    "answers": [
+                        {
+                            "id": 70,
+                            "name": "Fructose and glucose.\r\n",
+                            "cr": false
+                        },
+                        {
+                            "id": 71,
+                            "name": "Food additives added for sweet taste only in beverages.",
+                            "cr": false
+                        },
+                        {
+                            "id": 72,
+                            "name": "Food additives with intense sweet taste that provide few or no calories.",
+                            "cr": true
+                        }
+                    ]
+                },
+                {
+                    "id": 28,
+                    "name": "2. Are low \/ no calorie sweeteners safe?",
+                    "redSpan": "There are hundreds of studies confirming their safety. \r\nThe European Food Safety Authority has confirmed \r\ntheir safety along with all the other food additives \r\nyou may consume daily. ",
+                    "graySpan": "Safe and quality products start with safe and quality \r\ningredients. We would NEVER compromise the safety \r\nof our consumers who have trusted us for more than \r\n125 years. ",
+                    "photo": "e7fa6-4-calories-q2.png",
+                    "answers": [
+                        {
+                            "id": 73,
+                            "name": "They are safe only if you add them in your coffee.",
+                            "cr": false
+                        },
+                        {
+                            "id": 74,
+                            "name": "Yes, LNCS as all food additives are approved ONLY after undergoing a strict safety \r\nevaluation by food safety authorities.",
+                            "cr": true
+                        },
+                        {
+                            "id": 75,
+                            "name": "They are safe only for adult men.",
+                            "cr": false
+                        }
+                    ]
+                },
+                {
+                    "id": 29,
+                    "name": "3. Can LNCS really help with weight management?",
+                    "redSpan": "Together with regular physical exercise and balanced\r\nnutrition, LNCS are great and safe allies for calorie balance. ",
+                    "graySpan": "",
+                    "photo": "33d65-4-calories-q3.png",
+                    "answers": [
+                        {
+                            "id": 76,
+                            "name": "Yes, they can help manage weight if used consistently to reduce calorie intake as part \r\nof an overall sensible, balanced diet, combined with regular physical activity. \r\n",
+                            "cr": true
+                        },
+                        {
+                            "id": 77,
+                            "name": "No, they just taste good.",
+                            "cr": false
+                        },
+                        {
+                            "id": 78,
+                            "name": "They can dissolve body fat.",
+                            "cr": false
+                        }
+                    ]
+                },
+                {
+                    "id": 30,
+                    "name": "4. Are low \/ no calorie sweeteners safe for all populations?",
+                    "redSpan": "Yes, LNCS consumption is safe for all. This is confirmed by \r\nhealth and regulatory authorities around the world. ",
+                    "graySpan": "Pregnant or lactating women, or women trying to become pregnant, have special nutrition needs and should always consult their healthcare providers \r\nregarding their diet and lifestyle. Children have \r\nage-specific nutrition needs and we should always \r\nconsult with our health care provider about the dietary choices that are appropriate for them based on their age, weight, gender, level of physical activity, etc.  People with the rare genetic condition, phenylketonuria (PKU) should not consume phenylalanine, a component of aspartame.  But this doesn\u2019t mean that it is not safe for all other people. PKU is checked for at birth.",
+                    "photo": "f328b-4-calories-q4.png",
+                    "answers": [
+                        {
+                            "id": 79,
+                            "name": "No. They are safe for only about half the population.",
+                            "cr": false
+                        },
+                        {
+                            "id": 80,
+                            "name": "Yes, LNCS are safe to be consumed by all populations. Aspartame cannot be\r\nconsumed by people suffering from the rare genetic disorder PKU (Phenylketonuria).",
+                            "cr": true
+                        },
+                        {
+                            "id": 81,
+                            "name": "No. People with long hair shouldn\u2019t consume low and no calorie sweeteners.",
+                            "cr": false
+                        }
+                    ]
+                },
+                {
+                    "id": 31,
+                    "name": "5. So, if LNCS Are safe, why do we keep on reading so many negatives about them? ",
+                    "redSpan": "Misinformation travels quickly on the Internet and other \r\nmedia. And remember: For some media Good news is \r\nno news! Some media tend to sensationalize \u2018bad\u2019 news, \r\neven those not based on scientific evidence.",
+                    "graySpan": "So, don\u2019t believe everything you read. The key is to \r\nFILTER through the information on the internet and other \r\nsources and seek credible sources for food safety \r\nissues (i.e. EFSA, JECFA, FDA etc). ",
+                    "photo": "510cc-4-calories-q5.png",
+                    "answers": [
+                        {
+                            "id": 82,
+                            "name": "Unfounded claims that something is unsafe travels faster and is deemed more \r\ninteresting to publish. Health authorities all over the world assure us that LNCS\r\nare safe.",
+                            "cr": true
+                        },
+                        {
+                            "id": 83,
+                            "name": "Because LNCS are not tested before they are used.",
+                            "cr": false
+                        },
+                        {
+                            "id": 84,
+                            "name": "Because manufacturers of LNCS do not have to follow regulations.",
+                            "cr": false
+                        }
+                    ]
+                },
+                {
+                    "id": 32,
+                    "name": "6. Is aspartame safe?",
+                    "redSpan": "Aspartame has been repeatedly evaluated and affirmed\r\nas safe by food safety authorities around the world \r\n(e.g. EFSA and FDA). Leading food safety authorities have \r\nextensively evaluated all available scientific data and \r\nhave concluded that it is safe for human consumption.",
+                    "graySpan": "People with the rare genetic condition, phenylketonuria \r\n(PKU) should not consume phenylalanine, a component \r\nof aspartame.",
+                    "photo": "06a4d-4-calories-q6.png",
+                    "answers": [
+                        {
+                            "id": 85,
+                            "name": "It is safe only for adult men.",
+                            "cr": false
+                        },
+                        {
+                            "id": 86,
+                            "name": "It is safe only if you add it in your coffee.",
+                            "cr": false
+                        },
+                        {
+                            "id": 87,
+                            "name": "Yes. Hundreds of studies have been conducted to support the safety of aspartame. \r\nIt is one of the most thoroughly researched and studied food ingredients in use today. ",
+                            "cr": true
+                        }
+                    ]
+                }
+            ];
+        </script>
+        <!--END OF TRANSLATION-->
+
+        <script type="text/javascript">
+            var site_url = "../";
+            var testFile = window.parent.testFileName;
+        </script> 
+        <script src="../js/testplay.js"></script>
+    </body>
+</html>

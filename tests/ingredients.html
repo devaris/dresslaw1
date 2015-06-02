@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../css/style.css" />
+        <script src="../js/jquery-1.11.0.min.js"></script>
+        <script src="../js/translation.js"></script>
+        <script src="../js/common.js"></script>
+    </head>
+    <body>
+        <div id="wrapper">
+
+            <div id="mobile_menu">
+                <div id="mobile_menu_header">
+                    <img id="menu_close" src="../images/heart-menu.png" alt="menu">
+                    <img src="../images/header-logo-mobile.png" alt="logo">
+                </div>
+                <nav class="mobile_header_nav">
+                    <ul>
+                        <li><div class="test_bullet first"></div><a href="javascript:" id="6" class="low_calorie"></a></li>
+                        <li><div class="test_bullet second"></div><a href="javascript:" id="7" class="artificiality"></a></li>
+                        <li><div class="test_bullet third"></div><a href="javascript:" id="6" class="energy_balance"></a></li>
+                        <li><div class="test_bullet fourth"></div><a href="javascript:" id="10" class="ingredients"></a></li>
+                    </ul>
+                </nav>
+                <div id="mobile_menu_footer">
+                    <nav>
+                        <ul>
+                            <li><img src="../images/home-mobile-icon.png"><a href="javascript:" onClick="parent.goToPage('pages/landing.html')" class="home"></a></li>
+                            <li><img src="../images/about-mobile-icon.png"><a href="javascript:" onClick="parent.goToPage('pages/about.html')" class="about"></a></li>
+                            <li><img src="../images/mobile-qa-icon.png"><a href="javascript:" onClick="parent.goToPage('pages/qa.html')" class="qa"></a></li>
+                            <li><img src="../images/help-mobile-icon.png"><a href="javascript:" onClick="parent.goToPage('pages/help.html')" class="help"></a></li>
+                            <li><img src="../images/mobile-exit-icon.png" style="margin-left: -4px"><a href="javascript:" onClick="parent.exit()" class="exit"></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>            
+            <div id="header">
+                <div id="mobile_menu_icon">
+                    <img alt="menu" src="../images/heart-menu.png" id="menu_open">
+                </div>
+
+                <div class="title_gradient" id="question_title">
+                    <h2></h2>
+                </div>
+                <div id="heart">
+                    <img alt="heart" src="../images/header-heart-icon.png">
+                </div>
+            </div>
+            
+			<!-- <div style="margin-top: 35px; padding-left: 20px" id="center_section"> -->
+			<div style="padding-left: 20px" id="center_section">
+                <div id="question_img">
+                </div>
+                <div id="questions_section">
+                </div>
+
+                <img alt="submit" src="../images/submit-btn-disabled.png" id="submit_btn">
+
+                <div id="answer_section">
+                    <span class="answer_status"></span>
+                    <div id="answer_overlay">
+                    </div>
+                </div>
+            </div>
+
+            <div class="test_watermark">
+                <div style="padding-left: 15px; font-family: robotoregular; line-height: 5px;" class="red_border">Ingredients</div>
+            </div>
+
+
+            <div id="footer"></div>
+        </div>
+
+        <!-- FOR TRANSLATION-->
+        <script type="text/javascript">
+            var testName = lang.ingredients;
+            var correctLabel = lang.correctLabel;
+            var incorrectLabel = lang.incorrectLabel;
+            var continueBtn = lang.continueBtn;
+            var questions = [
+                {
+                    "id": 17,
+                    "name": "6. Γιατί στην αρχαιότητα ψηφίστηκε νόμος οι προπονητές να εισέρχονται γυμνοί στο στάδιο στους Ολυμπιακούς Αγώνες (αρχές 4ου αιώνα π.Χ.) ;",
+                    "redSpan": "Water is the main ingredient of our sparkling soft drinks.\r\nCoca-Cola contains >85% of water, while Coca-Cola \r\nZero and Light contain about 99% water.",
+                    "graySpan": "When consuming beverages with calories \r\n(like Coca-Cola), be mindful that all calories count \r\nin managing your weight.",
+                    "photo": "1b.png",
+                    "answers": [
+                        {
+                            "id": 43,
+                            "name": "Για να προάγουν το «νους υγιής εν σώματι υγιεί»",
+                            "cr": false
+                        },
+                        {
+                            "id": 44,
+                            "name": "Γιατί οι προπονητές προέρχονταν από την τάξη των δούλων",
+                            "cr": false
+                        },
+                        {
+                            "id": 45,
+                            "name": "Για να μην δημιουργούν σύγχυση στους αθλητές με το χρώμα του μανδύα τους",
+                            "cr": false
+                        }
+						,
+                        {
+                            "id": 46,
+                            "name": "Εξαιτίας της Καλλιπάτειρας που μεταμφιέστηκε σε προπονητή και εισήλθε στο στάδιο",
+                            "cr": true
+                        }
+                    ]
+                },
+                {
+                    "id": 18,
+                    "name": "7. Τι χρώμα έχει το χειμερινό υποκάμισο των αγροφυλάκων, σύμφωνα με το άρθρο 10 της ΥΑ 100//2008 (ΥΑ 1008/1/1 ΦΕΚ Β 803 2008);",
+                    "redSpan": "Diabetes occurs when the body can no longer \r\n1) make insulin, or 2) make enough insulin, or \r\n3) properly use insulin, a hormone produced by the pancreas. Consuming too many calories from any \r\ncombination of foods and beverages without burning enough calories to keep your energy balance, can \r\nlead to overweight and obesity, which are risk factors for diabetes. ",
+                    "graySpan": "When it comes to weight management remember that all calories count, whatever food or beverage they come from, including calories from our beverages.",
+                    "photo": "2b.png",
+                    "answers": [
+                        {
+                            "id": 47,
+                            "name": "Πορτοκαλί",
+                            "cr": false
+                        },
+                        {
+                            "id": 48,
+                            "name": "Μαύρο",
+                            "cr": false
+                        },
+                        {
+                            "id": 49,
+                            "name": "Γκρι",
+                            "cr": false
+                        }
+						,
+                        {
+                            "id": 50,
+                            "name": "Σιέλ",
+                            "cr": true
+                        }
+                    ]
+                },
+                {
+                    "id": 19,
+                    "name": "8. Τι χρώμα ένδυμα οφείλει να φέρει η ταμίας υδροθεραπευτηρίου, σύμφωνα με το άρθρο 20 της ΥΑ 117//1960 (Κανονισμός ΕΟΤ περί εποπτείας-λειτουργίας Υδροθεραπ.Ιαμ.Πηγών);",
+                    "redSpan": "A major part of the carbon dioxide in sparkling drinks does not even reach the stomach, as most of the gas escapes when the beverage container is opened. \r\nThe small amount of bubbles that reaches the stomach are readily and rapidly absorbed through the wall of the digestive tract.",
+                    "graySpan": "Overall, the amount of carbon dioxide absorbed by the body is relatively small compared to the amount our bodies produce naturally.",
+                    "photo": "3b.png",
+                    "answers": [
+                        {
+                            "id": 51,
+                            "name": "Λευκό",
+                            "cr": false
+                        },
+                        {
+                            "id": 52,
+                            "name": "Ερυθρό",
+                            "cr": false
+                        },
+                        {
+                            "id": 53,
+                            "name": "Βαθυκύανο",
+                            "cr": true
+                        }
+						,
+                        {
+                            "id": 54,
+                            "name": "Πορτοκαλί",
+                            "cr": false
+                        }
+                    ]
+                },
+                {
+                    "id": 20,
+                    "name": "9. Σύμφωνα με τη Συλλογική Σύμβαση Εργασίας 19-//2007, οι Εργάτες Τελετών Νεκροπομπών στα Νεκροταφεία Αθηνών Πειραιώς και Προαστίων δύνανται το καλοκαίρι να μην φορούν:",
+                    "redSpan": "While diet and being overweight may play a factor in the development of cellulite, no one caloric food or drink alone, including sparkling drinks, is responsible for its development.",
+                    "graySpan": "The causes of cellulite formation are not well \r\nunderstood. Factors thought to play a role in cellulite formation include female gender, Caucasian race, genes, hormones, metabolism, diet, sedentary \r\nlifestyle and smoking. Although excess weight can make cellulite worse, cellulite can occur in women \r\nwho are underweight, normal weight, or overweight. ",
+                    "photo": "4b.png",
+                    "answers": [
+                        {
+                            "id": 55,
+                            "name": "Μαύρη Γραβάτα",
+                            "cr": false
+                        },
+                        {
+                            "id": 56,
+                            "name": "Μαύρο Παπιγιόν",
+                            "cr": false
+                        },
+                        {
+                            "id": 57,
+                            "name": "Σακάκι",
+                            "cr": true
+                        }
+						,
+                        {
+                            "id": 58,
+                            "name": "Όλα τα ανωτέρω",
+                            "cr": false
+                        }
+                    ]
+                },
+                {
+                    "id": 21,
+                    "name": "10. Τι ένδυμα πρέπει να φέρουν οι κυνηγοί κατά τη διάρκεια κυνηγίου αγριογούρουνου, λαγού, μπεκάτσας και ορτυκιού, σύμφωνα με την ΥΑ 136//2013 (ΥΑ 136753/3365 ΦΕΚ Β 3100 2013): Ρυθμίσεις θήρας για την κυνηγετική περίοδο 2013 – 2014;",
+                    "redSpan": "There is no scientific evidence that sugars cause \r\nchildren to be hyperactive. ",
+                    "graySpan": "5b",
+                    "photo": "5b.png",
+                    "answers": [
+                       {
+                            "id": 55,
+                            "name": "Ένδυμα φωσφορίζον πορτοκαλί.",
+                            "cr": true
+                        },
+                        {
+                            "id": 56,
+                            "name": "Ολόσωμη φόρμα.",
+                            "cr": false
+                        },
+                        {
+                            "id": 57,
+                            "name": "Ψηλό ευδιάκριτο καπέλο.",
+                            "cr": false
+                        }
+						,
+                        {
+                            "id": 58,
+                            "name": "Τζάκετ τύπου παραλλαγή.",
+                            "cr": false
+                        }
+                    ]
+                }
+            ];
+        </script>
+        <!--END OF TRANSLATION-->
+
+        <script type="text/javascript">
+            var site_url = "../";
+            var testFile = parent.testFileName;
+			window.parent.testNum = 1;
+        </script> 
+        <script src="../js/testplay.js"></script>
+    </body>
+</html>

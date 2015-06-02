@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../css/style.css" />
+        <script src="../js/jquery-1.11.0.min.js"></script>
+        <script src="../js/translation.js"></script>
+        <script src="../js/common.js"></script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="mobile_menu">
+                <div id="mobile_menu_header">
+                    <img id="menu_close" src="../images/heart-menu.png" alt="menu">
+                    <img src="../images/header-logo-mobile.png" alt="logo">
+                </div>
+                <nav class="mobile_header_nav">
+                    <ul>
+                        <li><div class="test_bullet first"></div><a href="javascript:" id="6" class="low_calorie"></a></li>
+                        <li><div class="test_bullet second"></div><a href="javascript:" id="7" class="artificiality"></a></li>
+                        <li><div class="test_bullet third"></div><a href="javascript:" id="6" class="energy_balance"></a></li>
+                        <li><div class="test_bullet fourth"></div><a href="javascript:" id="10" class="ingredients"></a></li>
+                    </ul>
+                </nav>
+                <div id="mobile_menu_footer">
+                    <nav>
+                        <ul>
+                            <li><img src="../images/home-mobile-icon.png"><a href="javascript:" onClick="parent.goToPage('pages/landing.html')" class="home"></a></li>
+                            <li><img src="../images/about-mobile-icon.png"><a href="javascript:" onClick="parent.goToPage('pages/about.html')" class="about"></a></li>
+                            <li><img src="../images/mobile-qa-icon.png"><a href="javascript:" onClick="parent.goToPage('pages/qa.html')" class="qa"></a></li>
+                            <li><img src="../images/help-mobile-icon.png"><a href="javascript:" onClick="parent.goToPage('pages/help.html')" class="help"></a></li>
+                            <li><img src="../images/mobile-exit-icon.png" style="margin-left: -4px"><a href="javascript:" onClick="parent.exit()" class="exit"></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>            
+            <div id="header">
+                <div id="mobile_menu_icon">
+                    <img alt="menu" src="../images/heart-menu.png" id="menu_open">
+                </div>
+
+                <div id="home">
+                    <a href="javascript:" onClick="parent.goToPage('pages/landing.html')"><img alt="home" src="../images/header-home-icon.png"></a>
+                </div>
+                <h1 class="h1_gradient" id="h1_title">ΞΑΝΑΠΡΟΣΠΑΘΗΣΕ!</h1>
+                <div id="heart">
+                    <img alt="heart" src="../images/header-heart-icon.png">
+                </div>
+            </div>
+
+            <div id="center_section">
+
+                <div class="start_qa">
+                    <p style="width: 430px; float: left; font-family: robotoregular; color: #455560; font-size: 18px;">                        ΚΡΙΜΑ, ΔΕΝ ΑΠΑΝΤΗΣΕΣ ΣΕ ΟΛΕΣ ΤΙΣ ΕΡΩΤΗΣΕΙΣ ΠΑΡΑΜΕΝΕΙΣ ΣΤΑΣΙΜΟΣ</p>
+                    <!--<a href="javascript:" onClick="parent.goToPage('tests/'+fileName+'.html', true)"><img style="float: right; margin-right: 15px; margin-top: -15px" alt="retry" src="../images/retry-btn.png"></a>-->
+                    <a href="javascript:" id="retryme"><img style="float: right; margin-right: 15px; margin-top: -15px" alt="retry" src="../images/retry-btn.png"></a>
+                </div>
+                <!-- 
+                <div class="start_qa">
+                    <div style="float: left; margin-top: 25px" class="red_line">
+                        <h2>Refresh your knowledge about</h2>
+                        <span class="test_name red_uppercase">[[test_name]]</span>
+                    </div>
+                    <a href="javascript:" onClick="parent.goToPage('qa/'+fileName+'.html', true)"><img style="float: right; margin-right: 15px" alt="start" src="../images/qa-heart.png"></a>
+                </div>
+                -->
+
+                <div class="mobile_start_qa">
+                    <a href="javascript:" onClick="parent.goToPage('tests/'+fileName+'.html', true)"><span class="big_btn btn">Retry</span></a>
+                    <a href="javascript:" onClick="parent.goToPage('qa/'+fileName+'.html', true)"><span class="big_btn btn">Q &amp; A</span></a>
+                </div>
+
+            </div>
+
+            <div id="footer">
+
+            </div>
+        </div>
+        <script>
+			//$(".test_name").html(getUrlVar('test'));
+			// $("#numOfWrongs").html(getUrlVar('num_of_wrongs'));
+			
+			// CCS //
+			var fileName = window.parent.testFileName;
+			$(".test_name").html(window.parent.testName);
+			$("#numOfWrongs").html(window.parent.wrongAnswers);
+			
+			$(document).ready(function(){
+									   
+									   
+				var audio = new Audio('../audio/no.mp3');
+				audio.play();
+									   
+				 $("#retryme").click(function() {
+						for(j=0; j<5;j++){
+							//alert(j)
+							window.parent.correctQArray[window.parent.testNum][j] = window.parent.correctQArray[window.parent.testNum][j]-1;	
+						}
+						
+						/*
+						if (window.parent.testNum === 0){
+							window.parent.scoreLocal = window.parent.scoreLocal - 5;
+						} else {
+							window.parent.scoreLocal = window.parent.scoreLocal - 5;
+						}
+						*/
+						
+					
+					parent.goToPage('tests/'+fileName+'.html', true)
+				});
+			});
+
+        </script>
+    </body>
+</html>

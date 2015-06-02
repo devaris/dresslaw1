@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../css/style.css" />
+        <script src="../js/jquery-1.11.0.min.js"></script>
+        <script src="../js/translation.js"></script>
+        <script src="../js/common.js"></script>
+        <script src="../js/jquery-ui.js"></script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="mobile_menu">
+                <div id="mobile_menu_header">
+                    <img id="menu_close" src="../images/heart-menu.png" alt="menu">
+                    <img src="../images/header-logo-mobile.png" alt="logo">
+                </div>
+                <nav class="mobile_header_nav">
+                    <ul>
+                        <li><div class="test_bullet first"></div><a href="javascript:" id="6" class="low_calorie"></a></li>
+                        <li><div class="test_bullet second"></div><a href="javascript:" id="7" class="artificiality"></a></li>
+                        <li><div class="test_bullet third"></div><a href="javascript:" id="6" class="energy_balance"></a></li>
+                        <li><div class="test_bullet fourth"></div><a href="javascript:" id="10" class="ingredients"></a></li>
+                    </ul>
+                </nav>
+                <div id="mobile_menu_footer">
+                    <nav>
+                        <ul>
+                            <li><img src="../images/home-mobile-icon.png"><a href="javascript:" onClick="parent.goToPage('pages/landing.html')" class="home"></a></li>
+                            <li><img src="../images/about-mobile-icon.png"><a href="javascript:" onClick="parent.goToPage('pages/about.html')" class="about"></a></li>
+                            <li><img src="../images/mobile-qa-icon.png"><a href="javascript:" onClick="parent.goToPage('pages/qa.html')" class="qa"></a></li>
+                            <li><img src="../images/help-mobile-icon.png"><a href="javascript:" onClick="parent.goToPage('pages/help.html')" class="help"></a></li>
+                            <li><img src="../images/mobile-exit-icon.png" style="margin-left: -4px"><a href="javascript:" onClick="parent.exit()" class="exit"></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>            
+            <div id="header">
+                <div id="mobile_menu_icon">
+                    <img alt="menu" src="../images/heart-menu.png" id="menu_open">
+                </div>
+                <div id="home">
+                    <a href="javascript:" onClick="parent.goToPage('pages/landing.html')"><img alt="home" src="../images/header-home-icon.png"></a>
+                </div>
+                <h1 class="w470">Artificiality</h1>
+                <div id="heart">
+                    <img alt="heart" src="../images/header-heart-icon.png">
+                </div>
+            </div>
+
+            <div id="center_section">
+                <div id="accordion">
+                    <h3 class="acordion_title">1. How can something 'artificial' be good for me to eat or drink?</h3>
+                    <div>
+                        <p class="acordion_p">
+                            “Artificial” does not necessarily mean “bad” and “natural” does not necessarily
+                            mean “good”!                                                                                                                                
+                        </p>
+                    </div>
+
+                    <h3 class="acordion_title">2. What are food additives?</h3>
+                    <div>
+                        <p class="acordion_p">
+                            Additives are substances that are added in foodstuff to perform a specific 
+                            technological function.                                                                                                                                                                                                    
+                        </p>
+                    </div>
+
+                    <h3 class="acordion_title">3. What does the 'E' in front of some Coca-Cola ingredients mean?</h3>
+                    <div>
+                        <p class="acordion_p">
+                            E-numbers are a systematic way of “coding” different food additives in the 
+                            European Union (EU).                                                                                                                                
+                        </p>
+                    </div>
+
+                    <h3 class="acordion_title">4. How many additives does Coca-Cola have?</h3>
+                    <div>
+                        <p class="acordion_p">
+                            2                                                                                                                                                                                                    
+                        </p>
+                    </div>
+
+                    <h3 class="acordion_title">5. How can it be that Coca-Cola has no added preservatives?</h3>
+                    <div>
+                        <p class="acordion_p">
+                            The unique combination of ingredients is responsible for the stability of Coca-Cola.                                                            
+                        </p>
+                    </div>
+
+                    <h3 class="acordion_title">6. Are food additives safe?</h3>
+                    <div>
+                        <p class="acordion_p">
+                            All authorized food additives, including the ones in our products, are safe.                                                                                                                                
+                        </p>
+                    </div>
+
+                    <h3 class="acordion_title">7. I have heard that some E numbers are more dangerous than others.</h3>
+                    <div>
+                        <p class="acordion_p">
+                            There is NO SUCH THING as good or bad, safe or dangerous E numbers. 
+                            They are all safe when used at levels specified by authorities.                                                                                                                                                                                                    
+                        </p>
+                    </div>
+
+                </div>
+
+                <div style="float: left; margin-top: 20px; padding-left: 10px" class="logout"><a href="javascript:" onClick="parent.goToPage('tests/artificiality.html', true)">To start the quiz for Artificiality now, click here</a></div>
+            </div>
+
+            <div id="footer">
+
+            </div>
+        </div>
+        <script>
+            $("#accordion").accordion({
+                collapsible: true,
+                heightStyle: "content"
+            });
+        </script>
+    </body>
+</html>

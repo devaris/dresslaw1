@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../css/style.css" />
+        <script src="../js/jquery-1.11.0.min.js"></script>
+        <script src="../js/translation.js"></script>
+        <script src="../js/common.js"></script>
+    </head>
+    <body>
+        <div id="wrapper">
+
+            <div id="mobile_menu">
+                <div id="mobile_menu_header">
+                    <img id="menu_close" src="../images/heart-menu.png" alt="menu">
+                    <img src="../images/header-logo-mobile.png" alt="logo">
+                </div>
+                <nav class="mobile_header_nav">
+                    <ul>
+                        <li><div class="test_bullet first"></div><a href="javascript:" id="6" class="low_calorie"></a></li>
+                        <li><div class="test_bullet second"></div><a href="javascript:" id="7" class="artificiality"></a></li>
+                        <li><div class="test_bullet third"></div><a href="javascript:" id="6" class="energy_balance"></a></li>
+                        <li><div class="test_bullet fourth"></div><a href="javascript:" id="10" class="ingredients"></a></li>
+                    </ul>
+                </nav>
+                <div id="mobile_menu_footer">
+                    <nav>
+                        <ul>
+                            <li><img src="../images/home-mobile-icon.png"><a href="javascript:" onClick="parent.goToPage('pages/landing.html')" class="home"></a></li>
+                            <li><img src="../images/about-mobile-icon.png"><a href="javascript:" onClick="parent.goToPage('pages/about.html')" class="about"></a></li>
+                            <li><img src="../images/mobile-qa-icon.png"><a href="javascript:" onClick="parent.goToPage('pages/qa.html')" class="qa"></a></li>
+                            <li><img src="../images/help-mobile-icon.png"><a href="javascript:" onClick="parent.goToPage('pages/help.html')" class="help"></a></li>
+                            <li><img src="../images/mobile-exit-icon.png" style="margin-left: -4px"><a href="javascript:" onClick="parent.exit()" class="exit"></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>            
+            <div id="header">
+                <div id="mobile_menu_icon">
+                    <img alt="menu" src="../images/heart-menu.png" id="menu_open">
+                </div>
+                <div id="icon_left">
+                    <img src="../images/mobile-left-icon.png">
+                </div>
+                <div id="home">
+                    <a href="javascript:" onClick="parent.goToPage('pages/landing.html')"><img alt="home" src="../images/header-home-icon.png"></a>
+                </div>
+                <h1 class="h1_gradient" id="h1_title">Ready to take the <span class="test_name">[[test_name]]</span>?</h1>
+                <div id="heart">
+                    <img alt="heart" src="../images/header-heart-icon.png">
+                </div>
+            </div>
+
+            <div id="center_section">
+                <h2 class="numOfQuestions">This test comprises of <span id="num_of_questions">[[num_of_questions]]</span> questions on Coke-related nutrition facts. </h2>
+
+                <div class="start_qa">
+                    <div style="float:left; margin-top: 40px" class="red_line">
+                        <h2 style="display: inline">Have a good</h2> <span class="red_uppercase">learning journey!</span>
+                    </div>
+                    <a href="javascript:" onClick="parent.goToPage('tests/'+ fileName +'.html', true)"><img style="float: right; margin-right: 15px" alt="start" src="../images/start-heart.png"></a>
+                </div>
+                <div class="start_qa">
+                    <div style="float: left;" class="red_line">
+                        <h2>Refresh your knowledge about</h2>
+                        <span class="red_uppercase test_name">[[test_name]]</span>
+                    </div>
+                    <a href="javascript:" onClick="parent.goToPage('qa/'+ fileName +'.html', true)"><img style="float: right; margin-right: 15px" alt="start" src="../images/qa-heart.png"></a>
+                </div>
+
+                <div class="mobile_start_qa">
+                    <a href="javascript:" onClick="parent.goToPage('tests/'+ fileName +'.html', true)"><span class="big_btn btn">Start</span></a>
+                    <a href="javascript:" onClick="parent.goToPage('qa/'+ fileName +'.html', true)"><span class="big_btn btn">Q &amp; A</span></a>
+                </div>
+
+            </div>
+
+            <div id="footer">
+
+            </div>
+        </div>
+        <script>
+            //$(".test_name").html(getUrlVar('test'));
+            //$("#num_of_questions").html(getUrlVar('num_of_questions'));
+			
+			// CCS //
+			var fileName = window.parent.testFileName;
+			$(".test_name").html(window.parent.testName);
+			$("#num_of_questions").html(window.parent.numOfQuestion);
+
+            var originalFontSize = 19;
+            var sectionWidth = 470;
+
+            $('#h1_title').each(function() {
+                var spanWidth = $(this).width();
+                var newFontSize = (sectionWidth / spanWidth) * originalFontSize;
+                $(this).css({"font-size": newFontSize + "pt", "line-height": originalFontSize + "pt"});
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest identifier="Chapt" version="1.2" xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2" 
+	xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>1.2</schemaversion>
+    <lom xmlns="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1" >
+      <general>
+        <title>
+        <langstring>Hellenic Coca Cola</langstring>
+        </title>
+        <catalogentry>
+          <catalog></catalog>
+          <entry>
+            <langstring xml:lang="en"></langstring>
+          </entry>
+        </catalogentry>
+        <description>
+          <langstring xml:lang="en"></langstring>
+        </description>
+        <keyword>
+        <langstring xml:lang="en"></langstring>
+        </keyword> </general>
+      <lifecycle/>
+      <metametadata>
+        <metadatascheme>LOM-1.0</metadatascheme>
+      </metametadata>
+      <technical>
+        <format>text/html</format>
+        <location type="URI">http://www.ccseducation.com</location>
+      </technical>
+      <educational>
+        <typicallearningtime>
+          <datetime></datetime>
+        </typicallearningtime>
+      </educational>
+      <rights>
+        <cost>
+          <source>
+            <langstring xml:lang="x-none">LOM-WD6.1</langstring>
+          </source>
+          <value>
+            <langstring xml:lang="x-none">no</langstring>
+          </value>
+        </cost>
+        <copyrightandotherrestrictions>
+          <source>
+            <langstring xml:lang="x-none">LOM-WD6.1</langstring>
+          </source>
+          <value>
+            <langstring xml:lang="x-none">no</langstring>
+          </value>
+        </copyrightandotherrestrictions>
+        <description>
+          <langstring xml:lang="en"></langstring>
+        </description>
+      </rights>
+      <classification>
+        <purpose>
+          <source>
+            <langstring xml:lang="x-none">LOM-WD6.1</langstring>
+          </source>
+          <value>
+            <langstring xml:lang="x-none">coca_cola_learning_tool</langstring>
+          </value>
+        </purpose>
+        <description>
+          <langstring xml:lang="en"></langstring>
+        </description>
+        <keyword>
+        <langstring xml:lang="en"></langstring>
+        </keyword> </classification>
+    </lom>
+  </metadata>
+  <organizations default="coca_cola_learning_tool_ORG">
+    <organization identifier="coca_cola_learning_tool_ORG" structure="heirarchical">
+      <title>Coca-Cola Learning Tool</title>
+		<item identifier="SCO1" identifierref="SCO1_IDREF" isvisible="true">
+			<title>Learning Tool</title>
+		</item> 
+	</organization>
+  </organizations>
+  <resources>
+    <resource identifier="SCO1_IDREF" type="webcontent" href="index.html"  adlcp:scormtype="sco">
+      <file href="index.html"/> 
+      <dependency identifierref="common_files" />
+    </resource>
+    <!-- Common files shared by all SCOs-->
+    <resource identifier="common_files" type="webcontent" adlcp:scormtype="asset">
+	 <file href="js/scorm/SCORM_API_wrapper.js"/>
+     <file href="js/scorm/customSCORM.js"/>
+    </resource>
+  </resources>
+</manifest>

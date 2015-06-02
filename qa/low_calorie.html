@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../css/style.css" />
+        <script src="../js/jquery-1.11.0.min.js"></script>
+        <script src="../js/translation.js"></script>
+        <script src="../js/common.js"></script>
+        <script src="../js/jquery-ui.js"></script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="mobile_menu">
+                <div id="mobile_menu_header">
+                    <img id="menu_close" src="../images/heart-menu.png" alt="menu">
+                    <img src="../images/header-logo-mobile.png" alt="logo">
+                </div>
+                <nav class="mobile_header_nav">
+                    <ul>
+                        <li><div class="test_bullet first"></div><a href="javascript:" id="6" class="low_calorie"></a></li>
+                        <li><div class="test_bullet second"></div><a href="javascript:" id="7" class="artificiality"></a></li>
+                        <li><div class="test_bullet third"></div><a href="javascript:" id="6" class="energy_balance"></a></li>
+                        <li><div class="test_bullet fourth"></div><a href="javascript:" id="10" class="ingredients"></a></li>
+                    </ul>
+                </nav>
+                <div id="mobile_menu_footer">
+                    <nav>
+                        <ul>
+                            <li><img src="../images/home-mobile-icon.png"><a href="javascript:" onClick="parent.goToPage('pages/landing.html')" class="home"></a></li>
+                            <li><img src="../images/about-mobile-icon.png"><a href="javascript:" onClick="parent.goToPage('pages/about.html')" class="about"></a></li>
+                            <li><img src="../images/mobile-qa-icon.png"><a href="javascript:" onClick="parent.goToPage('pages/qa.html')" class="qa"></a></li>
+                            <li><img src="../images/help-mobile-icon.png"><a href="javascript:" onClick="parent.goToPage('pages/help.html')" class="help"></a></li>
+                            <li><img src="../images/mobile-exit-icon.png" style="margin-left: -4px"><a href="javascript:" onClick="parent.exit()" class="exit"></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>            
+            <div id="header">
+                <div id="mobile_menu_icon">
+                    <img alt="menu" src="../images/heart-menu.png" id="menu_open">
+                </div>
+                <div id="home">
+                    <a href="javascript:" onClick="parent.goToPage('pages/landing.html')"><img alt="home" src="../images/header-home-icon.png"></a>
+                </div>
+                <h1 class="w470">Low calorie sweeteners</h1>
+                <div id="heart">
+                    <img alt="heart" src="../images/header-heart-icon.png">
+                </div>
+            </div>
+
+            <div id="center_section">
+                <div id="accordion">
+                    <h3 class="acordion_title">1. What are low / no calorie sweeteners?</h3>
+                    <div>
+                        <p class="acordion_p">
+                            Food additives with intense sweet taste that provide few or no calories.</p>
+                    </div>
+
+                    <h3 class="acordion_title">2. Are low / no calorie sweeteners safe?</h3>
+                    <div>
+                        <p class="acordion_p">
+                            Yes, LNCS as all food additives are approved ONLY after undergoing a strict safety 
+                            evaluation by food safety authorities.                                                                                                                                
+                        </p>
+                    </div>
+
+                    <h3 class="acordion_title">3. Can LNCS really help with weight management?</h3>
+                    <div>
+                        <p class="acordion_p">
+                            Yes, they can help manage weight if used consistently to reduce calorie intake as part 
+                            of an overall sensible, balanced diet, combined with regular physical activity. 
+                        </p>
+                    </div>
+
+                    <h3 class="acordion_title">4. Are low / no calorie sweeteners safe for all populations?</h3>
+                    <div>
+                        <p class="acordion_p">
+                            Yes, LNCS are safe to be consumed by all populations. Aspartame cannot be
+                            consumed by people suffering from the rare genetic disorder PKU (Phenylketonuria).                                                                                                                                
+                        </p>
+                    </div>
+
+                    <h3 class="acordion_title">5. So, if LNCSS Are safe, why do we keep on reading so many negatives about them? </h3>
+                    <div>
+                        <p class="acordion_p">
+                            Unfounded claims that something is unsafe travels faster and is deemed more 
+                            interesting to publish. Health authorities all over the world assure us that LNCS
+                            are safe.                                                                                                                                                                                                    
+                        </p>
+                    </div>
+
+                    <h3 class="acordion_title">6. Is aspartame safe?</h3>
+                    <div>
+                        <p class="acordion_p">
+                            Yes. Hundreds of studies have been conducted to support the safety of aspartame. 
+                            It is one of the most thoroughly researched and studied food ingredients in use today.    
+                        </p>
+                    </div>
+
+                </div>
+
+                <div style="float: left; margin-top: 20px; padding-left: 10px" class="logout"><a href="javascript:" onClick="parent.goToPage('tests/low_calorie.html', true)">To start the quiz for Low calorie sweeteners now, click here</a></div>
+            </div>
+
+            <div id="footer">
+
+            </div>
+        </div>
+        <script>
+            $("#accordion").accordion({
+                collapsible: true,
+                heightStyle: "content"
+            });
+        </script>
+    </body>
+</html>

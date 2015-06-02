@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../css/style.css" />
+        <script src="../js/jquery-1.11.0.min.js"></script>
+        <script src="../js/translation.js"></script>
+        <script src="../js/common.js"></script>
+    </head>
+    <body>
+        <div id="wrapper">
+
+            <div id="mobile_menu">
+                <div id="mobile_menu_header">
+                    <img id="menu_close" src="../images/heart-menu.png" alt="menu">
+                    <img src="../images/header-logo-mobile.png" alt="logo">
+                </div>
+                <nav class="mobile_header_nav">
+                    <ul>
+                        <li><div class="test_bullet first"></div><a href="javascript:" id="6" class="low_calorie"></a></li>
+                        <li><div class="test_bullet second"></div><a href="javascript:" id="7" class="artificiality"></a></li>
+                        <li><div class="test_bullet third"></div><a href="javascript:" id="6" class="energy_balance"></a></li>
+                        <li><div class="test_bullet fourth"></div><a href="javascript:" id="10" class="ingredients"></a></li>
+                    </ul>
+                </nav>
+                <div id="mobile_menu_footer">
+                    <nav>
+                        <ul>
+                            <li><img src="../images/home-mobile-icon.png"><a href="javascript:" onClick="parent.goToPage('pages/landing.html')" class="home"></a></li>
+                            <li><img src="../images/about-mobile-icon.png"><a href="javascript:" onClick="parent.goToPage('pages/about.html')" class="about"></a></li>
+                            <li><img src="../images/mobile-qa-icon.png"><a href="javascript:" onClick="parent.goToPage('pages/qa.html')" class="qa"></a></li>
+                            <li><img src="../images/help-mobile-icon.png"><a href="javascript:" onClick="parent.goToPage('pages/help.html')" class="help"></a></li>
+                            <li><img src="../images/mobile-exit-icon.png" style="margin-left: -4px"><a href="javascript:" onClick="parent.exit()" class="exit"></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>            
+            <div id="header">
+                <div id="mobile_menu_icon">
+                    <img alt="menu" src="../images/heart-menu.png" id="menu_open">
+                </div>
+
+                <div class="title_gradient" id="question_title">
+                    <h2></h2>
+                </div>
+                <div id="heart">
+                    <img alt="heart" src="../images/header-heart-icon.png">
+                </div>
+            </div>
+
+            <!-- <div style="margin-top: 35px; padding-left: 20px" id="center_section"> -->
+           <div style="padding-left: 20px" id="center_section">
+                <div id="question_img">
+                </div>
+                
+                <div id="questions_section">
+                </div>
+                
+                
+                
+                <img alt="submit" src="../images/submit-btn-disabled.png" id="submit_btn">
+
+                <div id="answer_section">
+                    <span class="answer_status"></span>
+                    <div id="answer_overlay">
+                    </div>
+                </div>
+            </div>
+
+            <div class="test_watermark">
+                <div style="padding-left: 15px; font-family: VAGRounded; line-height: 5px;" class="red_border">Low calorie sweeteners</div>
+            </div>
+
+
+            <div id="footer"></div>
+        </div>
+
+        <!-- FOR TRANSLATION-->
+        <script type="text/javascript">
+            var testName = lang.low_calorie;
+            var correctLabel = lang.correctLabel;
+            var incorrectLabel = lang.incorrectLabel;
+            var continueBtn = lang.continueBtn;
+            var questions = [
+                {
+                    "id": 27,
+                    "name": "1. Πότε καταργήθηκε η σχολική ποδιά;",
+                    "redSpan": "Low\/No calorie sweeteners are up to several hundred times\r\nsweeter than sugar, so only a small amount is needed\r\nto replace a larger amount of sugar. LNCS are used in big \r\nvariety of food & drink products including soft drinks, \r\nchewing gum, confectionery, frozen desserts, \r\nyoghurts, dessert mixes and puddings. ",
+                    "graySpan": "The most commonly used LNCS in our products: \r\naspartame, acesulfame-K, cyclamate, sucralose, \r\nsteviol glucosides.",
+                    "photo": "1a.png",
+                    "answers": [
+                        {
+                            "id": 70,
+                            "name": "1982 επί Υπουργού Παιδείας Ελευθερίου Βερυβάκη",
+                            "cr": true
+                        },
+                        {
+                            "id": 71,
+                            "name": "1975 επί Υπουργού Παιδείας Παναγιώτη Ζέπου",
+                            "cr": false
+                        },
+                        {
+                            "id": 72,
+                            "name": "1981 επί Υπουργού Παιδείας Αθανασίου Ταλιαδούρου",
+                            "cr": false
+                        },
+						{
+                            "id": 73,
+                            "name": "1995 επί Υπουργού Παιδείας Γεωργίου Παπανδρέου",
+                            "cr": false
+                        }
+                    ]
+                },
+                {
+                    "id": 28,
+                    "name": "2. Ποια διάταξη προβλέπει συγκεκριμένη ενδυμασία για τους έλληνες δικηγόρους;",
+                    "redSpan": "There are hundreds of studies confirming their safety. \r\nThe European Food Safety Authority has confirmed \r\ntheir safety along with all the other food additives \r\nyou may consume daily. ",
+                    "graySpan": "Safe and quality products start with safe and quality \r\ningredients. We would NEVER compromise the safety \r\nof our consumers who have trusted us for more than \r\n125 years. ",
+                    "photo": "2a.png",
+                    "answers": [
+                        {
+                            "id": 74,
+                            "name": "Το άρθρο 2 του β.δ. της 22/31 Ιουλίου 1936.",
+                            "cr": true
+                        },
+                        {
+                            "id": 75,
+                            "name": "Το άρθρο 361 ΑΚ.",
+                            "cr": false
+                        },
+                        {
+                            "id": 76,
+                            "name": "Το άρθρο 4 του Συντάγματος",
+                            "cr": false
+                        },
+						{
+                            "id": 77,
+                            "name": "Το άρθρο 1 του Ν. 146/1914",
+                            "cr": false
+                        }
+                    ]
+                },
+                {
+                    "id": 29,
+                    "name": "3. Κατ’ εφαρμογή του άρθρου 5 της ΥΑ 352//2013 (ΥΑ 3525.1.1.10/01/2013 ΦΕΚ Β 2078 2013) ποιο είναι το μηνιαίο επίδομα ιματισμού που χορηγείται σε ναύτη τουριστικού επιβατηγού πλοίου για καθαρισμό της στολής του ;",
+                    "redSpan": "Together with regular physical exercise and balanced\r\nnutrition, LNCS are great and safe allies for calorie balance. ",
+                    "graySpan": "",
+                    "photo": "3a.png",
+                    "answers": [
+                        {
+                            "id": 78,
+                            "name": "200 ευρώ",
+                            "cr": false
+                        },
+                        {
+                            "id": 79,
+                            "name": "49,95 ευρώ",
+                            "cr": true
+                        },
+                        {
+                            "id": 80,
+                            "name": "101,95 ευρώ",
+                            "cr": false
+                        },
+                        {
+                            "id": 81,
+                            "name": "22,50 ευρώ",
+                            "cr": false
+                        }
+                    ]
+                },
+                {
+                    "id": 30,
+                    "name": "4. Πώς ήταν το όνομα της πρώτης παραβάτιδος που συνελήφθη επ’ αυτοφώρω για το αδίκημα της κοντής φούστας επί Δικτατορίας Θεόδωρου Πάγκαλου (1925);",
+                    "redSpan": "Yes, LNCS consumption is safe for all. This is confirmed by \r\nhealth and regulatory authorities around the world. ",
+                    "graySpan": "Pregnant or lactating women, or women trying to become pregnant, have special nutrition needs and should always consult their healthcare providers \r\nregarding their diet and lifestyle. Children have \r\nage-specific nutrition needs and we should always \r\nconsult with our health care provider about the dietary choices that are appropriate for them based on their age, weight, gender, level of physical activity, etc.  People with the rare genetic condition, phenylketonuria (PKU) should not consume phenylalanine, a component of aspartame.  But this doesn\u2019t mean that it is not safe for all other people. PKU is checked for at birth.",
+                    "photo": "4a.png",
+                    "answers": [
+                        {
+                            "id": 82,
+                            "name": "Μαρία Πουλικάκη, 23 ετών",
+                            "cr": false
+                        },
+                        {
+                            "id": 83,
+                            "name": "Κατίνα Βογιατζή, 22 ετών",
+                            "cr": true
+                        },
+                        {
+                            "id": 84,
+                            "name": "Μαρίκα Μπακαρτζή, 18 ετών",
+                            "cr": false
+                        },
+                        {
+                            "id": 85,
+                            "name": "Ελένη Φιδεράτου, 16 ετών ",
+                            "cr": false
+                        }
+                    ]
+                },
+                {
+                    "id": 31,
+                    "name": "5. Με Βασιλικό Διάταγμα ποιού έτους καθιερώθηκε η ακαδημαϊκή τήβεννος για τους Καθηγητές του Εθνικού και Καποδιστριακού Πανεπιστημίου Αθηνών (έτος ίδρυσης 1837);",
+                    "redSpan": "Misinformation travels quickly on the Internet and other \r\nmedia. And remember: For some media Good news is \r\nno news! Some media tend to sensationalize \u2018bad\u2019 news, \r\neven those not based on scientific evidence.",
+                    "graySpan": "So, don\u2019t believe everything you read. The key is to \r\nFILTER through the information on the internet and other \r\nsources and seek credible sources for food safety \r\nissues (i.e. EFSA, JECFA, FDA etc). ",
+                    "photo": "5a.png",
+                    "answers": [
+                        {
+                            "id": 86,
+                            "name": "1837",
+                            "cr": false
+                        },
+                        {
+                            "id": 87,
+                            "name": "1864",
+                            "cr": false
+                        },
+                        {
+                            "id": 88,
+                            "name": "1952",
+                            "cr": true
+                        },
+                        {
+                            "id": 89,
+                            "name": "1937",
+                            "cr": false
+                        }
+                    ]
+                }
+            ];
+        </script>
+        <!--END OF TRANSLATION-->
+
+        <script type="text/javascript">
+            var site_url = "../";
+            var testFile = window.parent.testFileName;
+			window.parent.testNum = 0;
+        </script> 
+        <script src="../js/testplay.js"></script>
+    </body>
+</html>
